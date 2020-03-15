@@ -162,7 +162,7 @@ class Frame:
 
 		file_path = Settings.DB_FILE_PATH
 
-		with open(file_path, 'r') as infile:
+		with open(file_path, 'r', encoding="utf8") as infile:
 			data = json.load(infile)
 		scheme = Frame.loadFrame(data)
 		print('Схема "{}" загружена из {}\n'.format(scheme, file_path))
